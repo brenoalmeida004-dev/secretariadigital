@@ -1,1 +1,98 @@
- 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secretaria Digital</title>
+
+  <!-- Tailwind CSS (você vai estilizar por aqui Bereno) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" />
+
+  <!-- Arquivo de estilos personalizados do seu amigo -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- =============================
+       CABEÇALHO DA PÁGINA
+  ============================== -->
+  <header id="cabecalho">
+    <div id="logo">
+      <h1>Secretaria Digital</h1>
+      <p>Agende seu horário de forma rápida e fácil</p>
+    </div>
+  </header>
+
+  <!-- =============================
+       SEÇÃO PRINCIPAL (HERO)
+       Primeira coisa que o cliente vê
+  ============================== -->
+  <main>
+    <section id="hero">
+      <div id="hero-conteudo">
+        <h2>Bem-vindo à nossa agenda online</h2>
+        <p>Escolha o melhor horário para você, sem precisar ligar ou esperar.</p>
+
+        <!-- Botão principal de ação -->
+        <a href="agendamento.html" id="btn-agendar">
+          Agendar meu horário
+        </a>
+      </div>
+    </section>
+
+    <!-- =============================
+         SEÇÃO DE COMO FUNCIONA
+         3 passos simples
+    ============================== -->
+    <section id="como-funciona">
+      <h2>Como funciona?</h2>
+
+      <div id="cards-passos">
+
+        <!-- Passo 1 -->
+        <div class="card-passo">
+          <span class="numero-passo">1</span>
+          <h3>Escolha a data</h3>
+          <p>Veja os dias disponíveis no calendário e selecione o que funciona melhor pra você.</p>
+        </div>
+
+        <!-- Passo 2 -->
+        <div class="card-passo">
+          <span class="numero-passo">2</span>
+          <h3>Escolha o horário</h3>
+          <p>Veja os horários livres do dia escolhido e selecione um.</p>
+        </div>
+
+        <!-- Passo 3 -->
+        <div class="card-passo">
+          <span class="numero-passo">3</span>
+          <h3>Confirme o agendamento</h3>
+          <p>Preencha seu nome e contato. Pronto! Seu horário está reservado.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =============================
+         CHAMADA PARA AÇÃO (CTA)
+         Segundo botão de agendamento
+    ============================== -->
+    <section id="cta">
+      <h2>Pronto para agendar?</h2>
+      <p>Leva menos de 2 minutos.</p>
+      <a href="agendamento.html" id="btn-cta">
+        Quero agendar agora
+      </a>
+    </section>
+
+  </main>
+
+  <!-- =============================
+       RODAPÉ
+  ============================== -->
+  <footer id="rodape">
+    <p>Secretaria Digital &copy; 2024 — Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>
