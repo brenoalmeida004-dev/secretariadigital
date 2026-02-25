@@ -179,3 +179,187 @@ body {
     max-width: 350px;
   }
 }
+
+/* ================================
+   pagina confirmaçao
+================================ */
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #e0f2fe, #f8fafc);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #1f2937;
+}
+
+/* ================================
+   CABEÇALHO
+================================ */
+#cabecalho {
+  background-color: #2563eb;
+  padding: 25px 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#cabecalho h1 {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+#cabecalho a {
+  text-decoration: none;
+}
+
+/* ================================
+   CONTEÚDO PRINCIPAL
+================================ */
+#pagina-confirmacao {
+  flex: 1;
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+/* Ícone */
+#icone-sucesso {
+  font-size: 60px;
+  margin-bottom: 20px;
+  animation: aparecer 0.6s ease-out;
+}
+
+/* Títulos */
+#titulo-confirmacao {
+  font-size: 2rem;
+  color: #16a34a;
+  margin-bottom: 10px;
+}
+
+#subtitulo-confirmacao {
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+/* ================================
+   CARD RESUMO
+================================ */
+#card-resumo {
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: left;
+  margin-bottom: 30px;
+  border: 1px solid #e5e7eb;
+}
+
+.linha-resumo {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.linha-resumo:last-child {
+  border-bottom: none;
+}
+
+.label-resumo {
+  font-weight: 600;
+  color: #374151;
+}
+
+.valor-resumo {
+  font-weight: 500;
+  color: #111827;
+}
+
+/* ================================
+   BOTÕES
+================================ */
+#area-acoes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#btn-voltar-inicio,
+#btn-novo-agendamento {
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+/* Botão secundário */
+#btn-voltar-inicio {
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+#btn-voltar-inicio:hover {
+  background-color: #d1d5db;
+  transform: translateY(-2px);
+}
+
+/* Botão principal */
+#btn-novo-agendamento {
+  background-color: #2563eb;
+  color: white;
+}
+
+#btn-novo-agendamento:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* ================================
+   RODAPÉ
+================================ */
+#rodape {
+  background-color: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* ================================
+   ANIMAÇÃO
+================================ */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ================================
+   RESPONSIVO
+================================ */
+@media (max-width: 600px) {
+  #pagina-confirmacao {
+    margin: 30px 15px;
+    padding: 25px;
+  }
+
+  .linha-resumo {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  #area-acoes {
+    flex-direction: column;
+  }
+}
