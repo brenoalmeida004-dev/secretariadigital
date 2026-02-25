@@ -1,1 +1,142 @@
- 
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agendamento Confirmado — Secretaria Digital</title>
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" />
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- =============================
+       CABEÇALHO
+  ============================== -->
+  <header id="cabecalho">
+    <div id="logo">
+      <a href="index.html">
+        <h1>Secretaria Digital</h1>
+      </a>
+    </div>
+  </header>
+
+  <!-- =============================
+       CONTEÚDO PRINCIPAL
+  ============================== -->
+  <main id="pagina-confirmacao">
+
+    <!-- Ícone de sucesso -->
+    <div id="icone-sucesso">✅</div>
+
+    <!-- Título -->
+    <h2 id="titulo-confirmacao">Agendamento confirmado!</h2>
+    <p id="subtitulo-confirmacao">Seu horário foi reservado com sucesso. Veja o resumo abaixo:</p>
+
+    <!-- =============================
+         CARD COM RESUMO DO AGENDAMENTO
+         Os dados são preenchidos pelo JavaScript
+    ============================== -->
+    <div id="card-resumo">
+
+      <div class="linha-resumo">
+        <span class="label-resumo">👤 Nome</span>
+        <span class="valor-resumo" id="resumo-nome">—</span>
+      </div>
+
+      <div class="linha-resumo">
+        <span class="label-resumo">📞 Contato</span>
+        <span class="valor-resumo" id="resumo-contato">—</span>
+      </div>
+
+      <div class="linha-resumo">
+        <span class="label-resumo">📅 Data</span>
+        <span class="valor-resumo" id="resumo-data">—</span>
+      </div>
+
+      <div class="linha-resumo">
+        <span class="label-resumo">🕐 Horário</span>
+        <span class="valor-resumo" id="resumo-horario">—</span>
+      </div>
+
+      <div class="linha-resumo">
+        <span class="label-resumo">📋 Status</span>
+        <span class="valor-resumo" id="resumo-status">Confirmado</span>
+      </div>
+
+    </div>
+
+    <!-- =============================
+         BOTÕES DE AÇÃO
+    ============================== -->
+    <div id="area-acoes">
+
+      <!-- Voltar para o início -->
+      <a href="index.html" id="btn-voltar-inicio">
+        Voltar para o início
+      </a>
+
+      <!-- Fazer novo agendamento -->
+      <a href="agendamento.html" id="btn-novo-agendamento">
+        Fazer novo agendamento
+      </a>
+
+    </div>
+
+  </main>
+
+  <!-- =============================
+       RODAPÉ
+  ============================== -->
+  <footer id="rodape">
+    <p>Secretaria Digital &copy; 2024 — Todos os direitos reservados</p>
+  </footer>
+
+  <!-- =============================
+       JAVASCRIPT
+       Lê os dados da URL e preenche o resumo
+  ============================== -->
+  <script>
+    // ------------------------------------------------
+    // Lê os parâmetros que vieram da página de agendamento
+    // Exemplo de URL: confirmacao.html?nome=João&data=2024-03-15&horario=14:00
+    // ------------------------------------------------
+    const params = new URLSearchParams(window.location.search);
+
+    const nome     = params.get("nome");
+    const contato  = params.get("contato");
+    const data     = params.get("data");
+    const horario  = params.get("horario");
+
+    // ------------------------------------------------
+    // Verifica se os dados existem antes de exibir
+    // Se o usuário acessar a página diretamente sem vir
+    // do formulário, redireciona para o início
+    // ------------------------------------------------
+    if (!nome || !data || !horario) {
+      window.location.href = "index.html";
+    }
+
+    // ------------------------------------------------
+    // Formata a data para exibição amigável
+    // De "2024-03-15" para "15/03/2024"
+    // ------------------------------------------------
+    function formatarData(dataString) {
+      const partes = dataString.split("-");
+      return partes[2] + "/" + partes[1] + "/" + partes[0];
+    }
+
+    // ------------------------------------------------
+    // Preenche o card de resumo com os dados do agendamento
+    // ------------------------------------------------
+    document.getElementById("resumo-nome").textContent    = nome;
+    document.getElementById("resumo-contato").textContent = contato;
+    document.getElementById("resumo-data").textContent    = formatarData(data);
+    document.getElementById("resumo-horario").textContent = horario;
+  </script>
+
+</body>
+</html>

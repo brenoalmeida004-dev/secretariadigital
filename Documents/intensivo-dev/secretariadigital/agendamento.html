@@ -1,1 +1,131 @@
- 
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agendar Horário — Secretaria Digital</title>
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" />
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- =============================
+       CABEÇALHO
+  ============================== -->
+  <header id="cabecalho">
+    <div id="logo">
+      <a href="index.html">
+        <h1>Secretaria Digital</h1>
+      </a>
+    </div>
+  </header>
+
+  <!-- =============================
+       CONTEÚDO PRINCIPAL
+  ============================== -->
+  <main id="pagina-agendamento">
+
+    <h2 id="titulo-agendamento">Agende seu horário</h2>
+    <p id="subtitulo-agendamento">Preencha os campos abaixo para reservar seu horário.</p>
+
+    <!-- =============================
+         FORMULÁRIO DE AGENDAMENTO
+         Dividido em 3 etapas visuais:
+         1. Dados pessoais
+         2. Escolha da data
+         3. Escolha do horário
+    ============================== -->
+    <form id="form-agendamento">
+
+      <!-- ETAPA 1: Dados pessoais -->
+      <section class="etapa-form" id="etapa-dados">
+        <h3 class="titulo-etapa">1. Seus dados</h3>
+
+        <div class="campo-form">
+          <label for="nome">Nome completo</label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            placeholder="Digite seu nome"
+            required
+          />
+        </div>
+
+        <div class="campo-form">
+          <label for="contato">E-mail ou telefone</label>
+          <input
+            type="text"
+            id="contato"
+            name="contato"
+            placeholder="Digite seu e-mail ou telefone"
+            required
+          />
+        </div>
+      </section>
+
+      <!-- ETAPA 2: Escolha da data -->
+      <section class="etapa-form" id="etapa-data">
+        <h3 class="titulo-etapa">2. Escolha a data</h3>
+
+        <div class="campo-form">
+          <label for="data">Data do agendamento</label>
+          <input
+            type="date"
+            id="data"
+            name="data"
+            required
+          />
+        </div>
+      </section>
+
+      <!-- ETAPA 3: Escolha do horário -->
+      <section class="etapa-form" id="etapa-horario">
+        <h3 class="titulo-etapa">3. Escolha o horário</h3>
+
+        <!-- Os botões de horário serão gerados pelo JavaScript -->
+        <!-- Horários ocupados ficarão desabilitados automaticamente -->
+        <div id="container-horarios">
+          <!-- Exemplo de como ficará após o JS carregar:
+            <button class="btn-horario disponivel">08:00</button>
+            <button class="btn-horario ocupado" disabled>09:00</button>
+            <button class="btn-horario disponivel">10:00</button>
+          -->
+          <p id="msg-selecione-data">Selecione uma data primeiro para ver os horários disponíveis.</p>
+        </div>
+
+        <!-- Campo oculto que guarda o horário selecionado -->
+        <input type="hidden" id="horario-selecionado" name="horario" />
+      </section>
+
+      <!-- BOTÃO DE CONFIRMAR -->
+      <div id="area-confirmar">
+        <button type="submit" id="btn-confirmar" disabled>
+          Confirmar agendamento
+        </button>
+        <p id="msg-botao">Selecione um horário para continuar</p>
+      </div>
+
+    </form>
+
+  </main>
+
+  <!-- =============================
+       RODAPÉ
+  ============================== -->
+  <footer id="rodape">
+    <p>Secretaria Digital &copy; 2024 — Todos os direitos reservados</p>
+  </footer>
+
+  <!-- =============================
+       JAVASCRIPT
+       Lógica de geração e seleção de horários
+  ============================== -->
+  <script src="js/script.js"></script>
+
+</body>
+</html>
