@@ -1,5 +1,5 @@
- /* ================================
-   RESET BÁSICO
+/* ================================
+   RESET
 ================================ */
 * {
   margin: 0;
@@ -8,9 +8,9 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f3f4f6;
-  color: #333;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  background-color: #f1f5f9;
+  color: #0f172a;
   line-height: 1.6;
 }
 
@@ -18,160 +18,174 @@ body {
    CABEÇALHO
 ================================ */
 #cabecalho {
-  background-color: #2563eb;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
   color: white;
   text-align: center;
-  padding: 40px 20px;
+  padding: 70px 20px;
 }
 
 #cabecalho h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 #cabecalho p {
+  margin-top: 12px;
   font-size: 1.1rem;
-  opacity: 0.9;
+  color: #cbd5e1;
 }
 
 /* ================================
    HERO
 ================================ */
 #hero {
-  background-color: white;
   text-align: center;
-  padding: 80px 20px;
+  padding: 110px 20px;
+  background-color: #e0efff; /* novo fundo azul gelo suave */
+  border-radius: 20px; /* dá leve suavidade nas bordas */
 }
 
 #hero h2 {
-  font-size: 2rem;
+  font-size: 2.4rem;
+  font-weight: 600;
   margin-bottom: 20px;
+  color: #0f172a;
 }
 
 #hero p {
   font-size: 1.1rem;
-  margin-bottom: 30px;
-  color: #555;
+  color: #475569;
+  margin-bottom: 40px;
 }
 
+/* ================================
+   BOTÃO PRINCIPAL
+================================ */
 #btn-agendar {
   display: inline-block;
-  background-color: #2563eb;
+  background: #2563eb;
   color: white;
-  padding: 12px 30px;
-  border-radius: 8px;
+  padding: 15px 38px;
+  border-radius: 50px;
+  font-weight: 600;
   text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
 }
 
 #btn-agendar:hover {
-  background-color: #1e40af;
-  transform: scale(1.05);
+  background: #1e40af;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.35);
 }
 
 /* ================================
    COMO FUNCIONA
 ================================ */
 #como-funciona {
-  padding: 80px 20px;
+  padding: 110px 20px;
   text-align: center;
-  background-color: #f9fafb;
+  background-color: #f0f4f8; /* fundo mais suave que o branco */
+  border-radius: 20px;
 }
 
 #como-funciona h2 {
-  font-size: 2rem;
-  margin-bottom: 50px;
+  font-size: 2.3rem;
+  margin-bottom: 60px;
 }
 
 #cards-passos {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 40px;
   flex-wrap: wrap;
 }
 
 .card-passo {
-  background-color: white;
-  padding: 30px;
-  border-radius: 12px;
-  width: 280px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  transition: 0.3s;
+  background: #e0efff; /* fundo azul gelo suave nos cards */
+  padding: 40px 30px;
+  border-radius: 18px;
+  width: 300px;
+  transition: 0.3s ease;
+  border: 1px solid #c0d9f8;
 }
 
 .card-passo:hover {
   transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
 .numero-passo {
   display: inline-block;
-  background-color: #2563eb;
+  background: #2563eb;
   color: white;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
   border-radius: 50%;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 /* ================================
    CTA
 ================================ */
 #cta {
-  background-color: #2563eb;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
   color: white;
   text-align: center;
-  padding: 80px 20px;
+  padding: 110px 20px;
+  border-radius: 20px;
 }
 
 #cta h2 {
-  font-size: 2rem;
+  font-size: 2.3rem;
   margin-bottom: 15px;
 }
 
 #cta p {
-  margin-bottom: 30px;
-  font-size: 1.1rem;
+  margin-bottom: 35px;
+  color: #e0e7ff;
 }
 
 #btn-cta {
   display: inline-block;
-  background-color: white;
-  color: #2563eb;
-  padding: 12px 30px;
-  border-radius: 8px;
+  background: white;
+  color: #1e3a8a;
+  padding: 15px 38px;
+  border-radius: 50px;
+  font-weight: 600;
   text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 #btn-cta:hover {
-  background-color: #e5e7eb;
-  transform: scale(1.05);
+  background: #e2e8f0;
+  transform: translateY(-3px);
 }
 
 /* ================================
    RODAPÉ
 ================================ */
 #rodape {
-  background-color: #1f2937;
-  color: white;
+  background: #0f172a;
+  color: #94a3b8;
   text-align: center;
-  padding: 20px;
+  padding: 25px;
   font-size: 0.9rem;
+  border-radius: 10px 10px 0 0;
 }
 
 /* ================================
-   RESPONSIVIDADE
+   RESPONSIVO
 ================================ */
 @media (max-width: 768px) {
+
   #hero h2,
   #como-funciona h2,
   #cta h2 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   .card-passo {
@@ -184,85 +198,77 @@ body {
    pagina confirmaçao
 ================================ */
 
+
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: linear-gradient(135deg, #e0f2fe, #f8fafc);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  color: #1f2937;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  background-color: #f1f5f9;
+  color: #0f172a;
+  line-height: 1.6;
 }
 
 /* ================================
    CABEÇALHO
 ================================ */
 #cabecalho {
-  background-color: #2563eb;
-  padding: 25px 20px;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 60px 20px;
 }
 
 #cabecalho h1 {
-  color: white;
-  font-size: 1.8rem;
-  font-weight: bold;
-}
-
-#cabecalho a {
-  text-decoration: none;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 /* ================================
-   CONTEÚDO PRINCIPAL
+   PÁGINA DE CONFIRMAÇÃO
 ================================ */
 #pagina-confirmacao {
-  flex: 1;
-  max-width: 700px;
-  margin: 60px auto;
-  padding: 40px;
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
+  margin: 60px auto 80px auto;
   text-align: center;
+  padding: 20px;
 }
 
-/* Ícone */
+/* Ícone de sucesso */
 #icone-sucesso {
-  font-size: 60px;
+  font-size: 4rem;
   margin-bottom: 20px;
-  animation: aparecer 0.6s ease-out;
 }
 
-/* Títulos */
+/* Título principal */
 #titulo-confirmacao {
   font-size: 2rem;
-  color: #16a34a;
-  margin-bottom: 10px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #1e40af; /* azul petróleo */
 }
 
+/* Subtítulo */
 #subtitulo-confirmacao {
-  color: #6b7280;
-  margin-bottom: 30px;
+  font-size: 1.1rem;
+  color: #475569;
+  margin-bottom: 40px;
 }
 
 /* ================================
-   CARD RESUMO
+   CARD DE RESUMO
 ================================ */
 #card-resumo {
-  background: #f9fafb;
-  border-radius: 12px;
-  padding: 25px;
-  text-align: left;
-  margin-bottom: 30px;
-  border: 1px solid #e5e7eb;
+  background-color: #e0efff; /* azul gelo suave */
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  margin-bottom: 40px;
 }
 
 .linha-resumo {
   display: flex;
   justify-content: space-between;
   padding: 12px 0;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #cfd8e3;
 }
 
 .linha-resumo:last-child {
@@ -271,16 +277,16 @@ body {
 
 .label-resumo {
   font-weight: 600;
-  color: #374151;
+  color: #2563eb;
 }
 
 .valor-resumo {
+  color: #0f172a;
   font-weight: 500;
-  color: #111827;
 }
 
 /* ================================
-   BOTÕES
+   BOTÕES DE AÇÃO
 ================================ */
 #area-acoes {
   display: flex;
@@ -289,77 +295,290 @@ body {
   flex-wrap: wrap;
 }
 
-#btn-voltar-inicio,
-#btn-novo-agendamento {
-  padding: 12px 25px;
-  border-radius: 8px;
+/* Botão principal */
+#btn-voltar-inicio {
+  background: #2563eb;
+  color: white;
+  padding: 14px 32px;
+  border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
-  transition: 0.3s ease;
-}
-
-/* Botão secundário */
-#btn-voltar-inicio {
-  background-color: #e5e7eb;
-  color: #111827;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
 }
 
 #btn-voltar-inicio:hover {
-  background-color: #d1d5db;
-  transform: translateY(-2px);
+  background: #1e40af;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.35);
 }
 
-/* Botão principal */
+/* Botão secundário */
 #btn-novo-agendamento {
-  background-color: #2563eb;
-  color: white;
+  background: white;
+  color: #2563eb;
+  padding: 14px 32px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid #2563eb;
 }
 
 #btn-novo-agendamento:hover {
-  background-color: #1d4ed8;
-  transform: translateY(-2px);
+  background: #e0efff;
+  color: #1e40af;
 }
 
 /* ================================
    RODAPÉ
 ================================ */
 #rodape {
-  background-color: #1f2937;
-  color: white;
+  background: #0f172a;
+  color: #94a3b8;
   text-align: center;
-  padding: 20px;
+  padding: 25px;
   font-size: 0.9rem;
-}
-
-/* ================================
-   ANIMAÇÃO
-================================ */
-@keyframes aparecer {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  border-radius: 10px 10px 0 0;
 }
 
 /* ================================
    RESPONSIVO
 ================================ */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   #pagina-confirmacao {
-    margin: 30px 15px;
+    margin: 40px 20px 60px 20px;
+  }
+
+  #titulo-confirmacao {
+    font-size: 1.8rem;
+  }
+
+  #card-resumo {
     padding: 25px;
   }
 
-  .linha-resumo {
-    flex-direction: column;
-    gap: 5px;
+  #btn-voltar-inicio,
+  #btn-novo-agendamento {
+    padding: 12px 28px;
+  }
+}
+
+/* ================================
+   pagina de agendamento
+================================ */
+
+
+body {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  background-color: #f1f5f9;
+  color: #0f172a;
+  line-height: 1.6;
+}
+
+/* ================================
+   CABEÇALHO
+================================ */
+#cabecalho {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+#cabecalho h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* ================================
+   PÁGINA DE AGENDAMENTO
+================================ */
+#pagina-agendamento {
+  max-width: 600px;
+  margin: 60px auto 80px auto;
+  text-align: center;
+  padding: 20px;
+}
+
+#titulo-agendamento {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #1e40af;
+}
+
+#subtitulo-agendamento {
+  font-size: 1.1rem;
+  color: #475569;
+  margin-bottom: 40px;
+}
+
+/* ================================
+   FORMULÁRIO
+================================ */
+form#form-agendamento {
+  background-color: #e0efff; /* azul gelo suave */
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+/* Cada etapa do formulário */
+.etapa-form {
+  margin-bottom: 30px;
+}
+
+/* Título das etapas */
+.titulo-etapa {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #2563eb;
+  text-align: left;
+}
+
+/* Campos do formulário */
+.campo-form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.campo-form label {
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #0f172a;
+}
+
+.campo-form input[type="text"],
+.campo-form input[type="date"] {
+  padding: 12px 15px;
+  border-radius: 12px;
+  border: 1px solid #cfd8e3;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.campo-form input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.25);
+}
+
+/* ================================
+   HORÁRIOS
+================================ */
+#container-horarios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 15px;
+  justify-content: center;
+}
+
+.btn-horario {
+  padding: 10px 18px;
+  border-radius: 50px;
+  border: 1px solid #2563eb;
+  background-color: white;
+  color: #2563eb;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-horario:hover:not([disabled]) {
+  background-color: #2563eb;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-horario.ocupado {
+  background-color: #cfd8e3;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* Mensagem para selecionar data */
+#msg-selecione-data {
+  font-size: 0.95rem;
+  color: #475569;
+  margin-top: 10px;
+}
+
+/* ================================
+   BOTÃO DE CONFIRMAR
+================================ */
+#area-confirmar {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#btn-confirmar {
+  background: #2563eb;
+  color: white;
+  padding: 14px 38px;
+  border-radius: 50px;
+  font-weight: 600;
+  border: none;
+  cursor: not-allowed;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+#btn-confirmar:enabled {
+  cursor: pointer;
+  opacity: 1;
+}
+
+#btn-confirmar:enabled:hover {
+  background: #1e40af;
+  transform: translateY(-2px);
+}
+
+#msg-botao {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+/* ================================
+   RODAPÉ
+================================ */
+#rodape {
+  background: #0f172a;
+  color: #94a3b8;
+  text-align: center;
+  padding: 25px;
+  font-size: 0.9rem;
+  border-radius: 10px 10px 0 0;
+}
+
+/* ================================
+   RESPONSIVO
+================================ */
+@media (max-width: 768px) {
+  #pagina-agendamento {
+    margin: 40px 20px 60px 20px;
   }
 
-  #area-acoes {
-    flex-direction: column;
+  #titulo-agendamento {
+    font-size: 1.8rem;
+  }
+
+  form#form-agendamento {
+    padding: 30px;
+  }
+
+  .btn-horario {
+    padding: 8px 14px;
+    font-size: 0.95rem;
+  }
+
+  #btn-confirmar {
+    padding: 12px 32px;
   }
 }
